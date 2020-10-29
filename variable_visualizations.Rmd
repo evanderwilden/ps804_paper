@@ -1,0 +1,172 @@
+---
+title: "Looking at Seminar Paper Variables"
+author: "Ethan vanderWilden"
+date: "30 October 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(haven)
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+```
+
+## Variables
+I am just starting to work with my dataset. As outlined in my paper plan, I have a few main variables of interest.
+
+IV: Religiosity\newline
+DVs: Voter Ideology and Party Supported\newline
+I also plan to start incorporating some controls like gender, age, and education
+
+
+
+
+Other Note: This is certainly a very preliminary look at some of my variables and their relationships! Certainly no conclusions drawn yet and also a little bit worried about excluding a fair bit of data when I get NAs. 
+
+
+```{r, echo = FALSE}
+dec_barometer <- read_sav("3269.sav")
+
+#subset to get the relevant variables to my study
+trialdata1<- select(dec_barometer, C12,C12A, B22, C4_1,
+                   C4_2, C4_3, C4_4, C4_6, C3, C9, C10, C11A)
+
+
+#rename the variables so I have an easier time navigating the data
+trialdata1 <- trialdata1 %>%
+  rename(religion = C12,
+         rel_attendance =C12A,
+         partyvote = B22,
+         psoe_ideology = C4_1,
+         pp_ideology = C4_2,
+         vox_ideology = C4_3,
+         podemos_ideology = C4_4,
+         cs_ideology = C4_6,
+         voter_ideology = C3,
+         sex = C9,
+         age = C10,
+         edu = C11A)
+
+#getting rid of NAs
+cleandata <- na.omit(trialdata1)
+
+```
+ \newpage
+
+## Barplot of Religious Attendance
+
+
+
+```{r , echo=FALSE}
+#Value of 9 is an NA here (by codebook)
+cleandata <- subset(cleandata, rel_attendance != 9)
+
+cleandata <- mutate(cleandata,
+                      attendance = case_when(
+                        rel_attendance == 1 ~ "Never",
+                        rel_attendance == 2 ~ "Almost Never",
+                        rel_attendance == 3 ~ "A Few Times per Year",
+                        rel_attendance == 4 ~ "2 or 3 Times per Month",
+                        rel_attendance == 5 ~ "Sundays and Holidays",
+                        rel_attendance == 6 ~ "Multiple Times per Week"))
+
+cleandata$attendance <- factor(cleandata$attendance,
+                               levels = c("Never", "Almost Never", 
+                                          "A Few Times per Year", 
+                                          "2 or 3 Times per Month", 
+                                          "Sundays and Holidays",
+                                          "Multiple Times per Week"))
+ggplot(data=cleandata, aes(x = attendance)) +
+  geom_bar(stat = "count")  + 
+  theme(axis.text.x= element_text(angle=45, hjust=1, size = 8)) +
+  labs(title = "Distribution of Church Attendance", 
+     y = "Counts in Sample",
+     x= "Religious Participation", 
+     subtitle = "December 2019", caption = "Data from CIS Barometer, December 2019")
+
+```
+
+The above barplot shows the distribution of my sample for my key independent variable, religiosity. This is measured through Religious participation.
+
+\newpage
+
+## Barplot of Party Support
+
+In the context of Spain, there are 5 dominant parties with many more regionally-based parties that hold a few seats. These parties have an array of different ideologies and priorities, so I think I am going to keep my analysis to the five main parties.
+
+```{r , echo=FALSE}
+bigfivedata<- cleandata
+
+bigfivedata <- mutate(bigfivedata,
+                      partyvote = case_when(
+                        partyvote == 1 ~ "PP",
+                        partyvote == 2 ~ "PSOE",
+                        partyvote == 4 ~ "Cs",
+                        partyvote == 21 ~ "Podemos",
+                        partyvote == 18 ~ "Vox"))
+
+#getting rid of NAs
+bigfivedata <- na.omit(bigfivedata)
+
+
+#Setting up bars' colors and order
+colorfill <- c( "purple2", "red2", "darkorange2", "dodgerblue1", "springgreen3" )
+bigfivedata$partyvote <- factor(bigfivedata$partyvote,
+                                levels = c("Podemos", "PSOE", "Cs", "PP", "Vox"))
+
+#Barplot for top 5 vote getting parties
+ggplot(data=bigfivedata, aes(x = partyvote)) +
+  geom_bar(stat = "count", aes(fill=partyvote), show.legend = FALSE) +
+  scale_fill_manual(values=colorfill) +
+  labs(title = "Distribution of Votes by Party", 
+     y = "Counts in Sample",
+     x= "Party supported in Nov 2019 General Election", 
+     subtitle = "December 2019", caption = "Data from CIS Barometer, December 2019")
+```
+
+The above barplot shows the distribution of voting for the major five parties in Spain in the election immediately preceding this survey (Election Nov 10, 2019, Survey early December 2019). Vox, the main subject of this study, has the third highest vote count in this sample, which matches to the electoral results from the election.
+\newpage
+
+## Histogram of Voter Ideologies
+
+```{r, echo=FALSE}
+ideology_data <- subset(trialdata1, voter_ideology !=98)
+ideology_data <- subset(ideology_data, voter_ideology !=99)
+
+ggplot(data=ideology_data, aes(x=voter_ideology)) +
+  geom_histogram(color = "Black", fill = "lightblue", bins = 10)+
+  labs(title = "Histogram of Voter Ideologies", 
+       subtitle = "December 2019", caption = "Data from CIS Barometer, December 2019",
+       x= "Left-Right Ideology (10 = Extreme Right)" , y = "Counts in Sample")
+```
+
+The above histogram shows the distribution of self-reported ideologies on a 1-10 left-right scale. It looks relatively normally distributed.
+
+\newpage
+
+## Looking at Relationship between Religious Attendance and Ideology
+
+```{r, echo=FALSE}
+correlation_test <- subset(cleandata, rel_attendance != 9)
+
+correlation_test <- subset(correlation_test, voter_ideology !=98)
+correlation_test <- subset(correlation_test, voter_ideology !=99)
+
+#plotting relationship between religious attendance and voter ideology
+ggplot(data=correlation_test, aes(x=rel_attendance, y = voter_ideology))+
+  geom_smooth(method = "lm") +
+  labs(title = "Relationship Between Religious Attendence and Ideology", 
+       y = "Left-Right Ideology (10 = Extreme Right)",
+       x= "Religious Attendance (increases as one moves right)", 
+       subtitle = "December 2019", caption = "Data from CIS Barometer, December 2019")
+
+cat("Correlation = ", cor(correlation_test$rel_attendance,
+                          correlation_test$voter_ideology), "\n")
+
+```
+
+On first glance, we can notice that a positive correlation between religious attendancew and right-ideologies. 
+
