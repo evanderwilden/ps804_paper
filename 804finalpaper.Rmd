@@ -1,0 +1,565 @@
+---
+title           : "Inefficient Issues? The Strategic Use of Religion by the Radical Right in Spain"
+subtitle        : "Final Paper for 804: Capitalism and Religion"
+author          : "Ethan vanderWilden"
+
+date            : "15 December 2020"
+output          : pdf_document
+
+bibliography    : 804refs.bib
+fontsize        : "12pt"
+header-includes:
+    - \usepackage{setspace}\doublespacing
+    - \usepackage{float}
+
+abstract: "Religious dealignment refers to the weakening association between religiosity and political attachments. Religious voters have long been associated with Christian Democratic and Conservative parties in Western Europe, though such attachments are now under question, with many of these center-right parties opting for more secular messages to attract an increasingly secular electorate. In the following paper, I address whether the appearance of a more overtly and unabashedly religious radical right party might attract (and realign) an electorate along the religious cleavage. Focusing on the case of Spain, I find no evidence that the relatively new radical right party, Vox, is winning religious voters. Still, however, the party boasts a strong Catholic message. I then explore other ways that religion does work for the party. If Vox does not win religious voters, then why center religion in the party's self-marketing? I offer an explanation to this puzzle by developing the claim that religious credibility and a religious understanding of Spain's 'national culture' is essential to the party's ownership over anti-immigration policy and frames of resistance and anti-political correctness."
+---
+
+\setlength{\parindent}{4em}
+\setlength{\parskip}{0em}
+\renewcommand{\baselinestretch}{2.0}
+\pagenumbering{gobble} 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+\newpage
+\pagenumbering{arabic} 
+
+## 1. Introduction
+On April 16, 2019, following the burning of the Notre Dame cathedral, Santiago Abascal, leader of the Spanish radical right Vox party, tweeted, "The #FakeNews is incapable of saying the Notre Dame is a Christian symbol in their headlines. For this reason, no one believes in them" (see Appendix, A1). Vox party leaders were quick to criticize the media's framing of the wreckage as the loss of a "European," rather than Christian symbol. In opposition to a more multi-cultural Europe and Spain, Vox promotes a narrative of culture and identity as descended from Christian and Catholic lineage. The party's self-marketing strategy often alludes to Spain's Catholic history, positioning itself as a defender of a national culture defined by religious (Catholic) history.  \par
+
+Multiple studies have noted increasing secularization in Western Europe [@arzheimerChristianReligiosityVoting2009; @daltonPoliticalCleavagesIssues2002; @norrisSacredSecularReligion2011]. As a result, center-right parties have largely shifted their rhetoric towards more secular orientations [@elffSocialDivisionsParty2009; @evansHowPartiesShape2012; @norrisSacredSecularReligion2011]. Changes in party supply--the options that voters can choose from--could explain a weakening association between religiosity and vote choice. However, as the opening example depicted, the Vox party in Spain offers an unabashed resurgence of religious messaging into the Spanish party marketplace. In the following paper, I address whether the presence of explicitly religious parties in the radical right party family can realign the electorate. \par
+
+I find no evidence that in the case of Spain, Vox, a radical right party that entered the national parliament in 2019 and is now the third largest party in congress, is winning religious voters. Religious voters have largely stuck with the existing center-right Conservative party, the Popular Party (PP). Thus, I find no evidence of a realigning of the electorate along traditional religious cleavages. The question then follows, if Vox is not winning religious voters, why does the party center Catholicism as a part of its party brand? In other words, what work does religion (and overt religious messaging) do for the party if it does not bring in religious voters? \par
+
+Relying on post-electoral individual-level survey data from December 2019 from the Centro de Investigaciones Sociológicas, I test three fundamental questions to develop my argument. First, I examine the relationship between religion and ideology in Spain. I find that religiosity is still relatively strongly associated with political ideology. To test whether the presence of Vox is instrumental in this alignment, I then examine whether Vox (the farthest ideologically right party in the party marketplace) is winning religious voters relative to other parties. I find that the center-right Popular Party still dominates among religious voters in Spain. Accordingly, I then examine and theorize on what work religion might do for Vox. I run a logistic regression to test the issues that Vox owns, finding that anti-immigration sentiments are fundamental to the party's success. I assert that religion is instrumental in Vox's articulation of a certain "national culture." Deploying religious messages thus opens the door for the party to credibly and coherently develop the issues and frames that draw in voters. Specifically, religion, and its role in defining national culture, strengthens Vox's ownership of anti-immigration policy while also providing it with a shield against accusations of racism. Furthermore, religion is an essential thread that helps the party coherently necessitate its various marketing frames--namely, a framework of resistance and against political correctness. This piece adds to existing literature on religious alignment, the radical right and religion, and frame theory. \par
+
+The rest of the paper is organized as follows. In section 2, I position the study within the literature on cleavages, religious dealignment, and the connection between religion and radical right parties. In section 3, I discuss the case of Spain and the positioning of Vox within the larger party marketplace. I examine religious alignment in Spain as well as party allegiances, finding evidence that although the country is relatively aligned, Vox is not winning religious votes. In section 4, I discuss the work that religion still does for the party, connecting my study to more theoretical understandings of religion in Europe. I conclude with a discussion of how the centering of religion and other issues may be further understood as indirect political strategies.
+
+
+## 2. Religious Alignment and the Radical Right
+
+Western European party politics have long been understood as representations of dominant societal cleavages [@lipsetPartySystemsVoter1967]. As the argument goes, the appearance and ideology of parties is thought to be driven by voter demand. Accordingly, parties came to occupy opposing sides of ideological divisions. Among such issues, scholars have consistently pointed to class and religion as dominant Western European cleavages [@lipsetPartySystemsVoter1967; @lijphartReligiousVsLinguistic1979; @elffSocialStructureElectoral2007]. In Western Europe, parties on the left are generally associated with more working class and non-religious voters. \par
+
+Although @lipsetPartySystemsVoter1967 argue that these dominant cleavages "froze" at the onset of democratization, scholars have more recently pushed back, finding that cleavages fluctuate and can shift in their relative importance [@goldbergEvolutionCleavageVoting2020; @raymondContinuedSalienceReligious2011]. If cleavages were to decline in importance, we might expect a subsequent dealigning of an electorate. Under this logic, the declining salience of a certain cleavage weakens the bond between voter and party. Scholars have pointed to both "supply"--wherein parties strategically promote or avoid certain issues, either centering or de-centering such cleavages in public debate--and "demand" explanations--wherein demographic and/or behavioral shifts in the electorate re-order relevant cleavages--in explaining fluctuations in the relative salience of cleavages [@evansHowPartiesShape2012; @goldbergEvolutionCleavageVoting2020; @norrisSacredSecularReligion2011]. When cleavage salience declines, we can expect a more volatile electorate, with voters detached from parties and willing to cast ballots in less predictable ways [@daltonPoliticalCleavagesIssues2002]. \par
+
+This paper is particularly focused on the religious cleavage. Traditionally, center-right Christian Democratic and Conservative parties have dominated the religious vote, rhetorically invoking Christian values and boasting their connection to the Church [@norrisSacredSecularReligion2011]. However, scholars have cited more recent trends of secularization (understood here as relating to Christianity) as a driving force behind religious dealignment [@daltonPoliticalCleavagesIssues2002; @norrisSacredSecularReligion2011]. However, others have found that religion still plays a strong role in predicting vote choice, and that the stated dealignment may in fact be over-exaggerated [@elffSocialStructureElectoral2007; @vanderbrugReligionPartyChoice2009]. The truth, likely, is that the religious cleavage holds varying salience across different countries. \par
+
+The advent of a more secular electorate does not necessitate religious dealignment. Just because a greater proportion of a population does not attend church does not necessarily imply a weakening of the association between those who do and their political ideologies. To explain this puzzle, scholars have studied the party supply that voters can choose from. We might expect that if parties lessened their overt religious rhetoric, the tie between religiosity and vote choice would weaken. Parties could shift away from a religious message to attract larger blocs of voters, in line with spatial understandings of party positioning and Median Voter Theory [@downsEconomicTheoryDemocracy1957; @kitscheltRadicalRightWestern1996]. If a growing proportion of the electorate is not attracted to religious messages, we would expect formerly religious parties to secularize their rhetoric [@elffSocialDivisionsParty2009; @evansHowPartiesShape2012; @norrisSacredSecularReligion2011]. \par
+
+Following this logic, if center-right parties are secularizing their messages and subsequently contributing to a religious dealignment, could the re-emergence of explicitly religious parties reverse this process? One party family of particular interest here is the radical right. Though radical right parties across the world display considerable variation in their treatment of religion, many in Western Europe do invoke Christianity in their rhetoric, programs, and media [@arzheimerChristianReligiosityVoting2009; @muddeFarRightToday2019]. While @arzheimerChristianReligiosityVoting2009 note that the weakening link between Conservative/Christian Democratic parties and religious voters creates an opportunity for radical right parties to attract such voters (as the new vanguard of Christianity), other scholars have noted that radical right parties are largely not winning this battle [@immerzeelReligionCatalystRestraint2013; @montgomeryExplainingReligionGap2015]. \par
+
+In the following section, I discuss the Spanish party system in relation to questions of cleavages and dealignment. I first discuss the relative religious alignment of the Spanish electorate. I then show that although Vox deploys the most overt religious messaging, they do not win the religious vote. 
+
+
+## 3. The Spanish Party System, Vox, and Religion
+
+Following a transition from dictatorship to democracy in the late 1970s, Spain's party system has been relatively stable, with competition shared mostly between the center-left Socialist (PSOE) party and center-right Conservative (PP) party. Initially, a pacted transition and a spirit of compromise positioned the two dominant parties as relatively centrist. However, the two-party-dominated marketplace came to be more representative of dominant economic and religious cleavages in the 1990s and 2000s [@chhibberEliteStrategySocial1997; @fieldDeThawingDemocracyDecline2005]. The Conservative Popular Party was associated with more religious (Catholic) voters, while the Socialists were more strongly tied to working class voters. \par
+
+In 2015, however, two new parties emerged in the national parliament. Podemos, a leftist party with roots in social protest following the 2008 financial crisis, and Ciudadanos, a center-right liberal-economic party who gained popularity first at the regional level in opposition to the Catalan Independence Movement, both entered the national parliament with significant vote shares (about 21% and 14%, respectively). The recently fragmented system saw a new national challenger in 2019. Vox, a radical right party with strong anti-immigration, anti-Catalan Independence, and anti-political correctness messages won over fifteen percent of the vote in the November general election, positioning the party as the third largest force in the national parliament. \par
+
+The now-five main parties compete on a variety of issues and dimensions. For the purposes of this paper, though, I am focused explicitly on the role of religion in party competition. While Ciudadanos still exist on the political right, their vote share in the November election dropped below seven percent. Furthermore, Ciudadanos has never claimed a strong religious identity, thus establishing the battle for religious voters mostly between the PP and Vox. \par
+
+Reviewing the party programs for the November 2019 General Election, neither party makes particularly strong appeals to Spain's Catholic history. The Popular Party's program has no mention of Catholicism or religion [@partidopopularProgramaElectoral20192019]. Vox, on the other hand, does mention religion in a number of places. However, their religious message is far more connected to Islam (five mentions in their short, 23 page program) than Catholicism, arguing for assimilation and cooperation with religion leaders in combating Islamic extremism [@vox100MedidasPara2019]. \par
+
+More telling, however, are the parties' informal communication. Vox's social media platforms are far more saturated with Catholic messaging and celebration than the PP's. Furthermore, Vox is far more willing to attack Islam in their messaging, whereas the PP advocates for a more multi-cultural, multi-religious Spain. A strong example of this difference in messaging can be seen in reference to the Notre Dame Cathedral burning mentioned in the opening of this paper. While Vox expressed sadness and anger in losing a Christian symbol, the PP and its leaders responded on social media by lamenting the loss of a symbol of "European" unity and culture. \par
+
+Are religious voters then be more attracted to a party that centers Catholicism and religion more often? To answer this question, I first examine the connection between religiosity and political ideology in Spain, giving insight into the predictive capacity of religiosity in this setting. Although more religious voters in Spain tend to ideologically locate themselves on the political right, the Popular Party, and not Vox, attracts the most religious voting core.
+  
+### 3.1 Analysis
+
+To understand the relative role of religiosity is structuring political preferences, I first test the association between religiosity and political ideology. If such a relationship is strong and positive (signifying that more religious voters tend to have more right-ideological orientations), I could reasonably expect Vox to do well with religious voters. Vox is ideologically the most extreme right party in the Spanish party marketplace, so, on the whole, religious voters might align themselves with the party. \par
+
+I use data from the Centro de Investigaciones Sociológicas (CIS) December 2019 post-electoral barometer [@centrodeinvestigacionessociologicasBarometroDiciembre20192019]. This survey captures viewpoints closely associated with the most recent Spanish general election. The December barometer consists of 4,804 respondents, randomly selected with quotas for sex and age. Data was collected between November 29 and December 19, 2019. The survey includes respondents from 48 out of 52 provinces and 428 municipalities in Spain. Interviews were conducted in person at the homes of the respondents. The age range is 18 years and older. \par
+
+First, I run an Ordinary Least Squares (OLS) regression to test the association between religiosity and ideology. I measure religiosity in two ways. First, religiosity is measured by church attendance on a scale of 1 ("never") to 6 ("multiple times per week"). Second, I create a dummy variable that distinguishes between "practicing Catholics" (1) and all others (0), which is self-identified by respondents. Ideology is self reported on a scale from 1 (extreme left) to 10 (extreme right). I control for age (coded as the numeric age) and sex (coded as 1 if the respondent is a woman), which may influence both religiosity and political ideology [@norrisSacredSecularReligion2011]. Descriptive statistics for these variables can be found in the appendix (A2). I expect an increase in religiosity to be associated with more right-ideologies. I examine four models, differentiating by the measurment of religionsity and whether I include controls. The results are presented in Table 1.
+
+```{r Data Cleaning, include=FALSE}
+library(haven)
+library(readr)
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+
+    ### DATA MANIPULATION###
+
+barometer <- read_sav("3269.sav") #load in data
+
+#subset to get the relevant variables to my study
+mydata <- select(barometer, C12,
+                 C12A,B22, C3, C9, C10, C4_1,C4_2,C4_3,C4_4,C4_6,
+                 A9_1, A9_2, A9_3)
+
+#rename the variables so I have an easier time navigating the data
+mydata <- mydata %>%
+  rename(religion = C12,
+         rel_attendance =C12A,
+         partyvote = B22,
+         voter_ideology = C3,
+         sex = C9,
+         age = C10,
+         psoe_ideology = C4_1,
+         pp_ideology = C4_2,
+         vox_ideology = C4_3,
+         podemos_ideology = C4_4,
+         cs_ideology = C4_6,
+         mip1 = A9_1,
+         mip2 = A9_2,
+         mip3 = A9_3)
+
+####For Each Variable, I want to make NAs uniform (in the dataset, they are 
+#often as numbers and differ by variable)
+
+#IDEOLOGY
+table(mydata$voter_ideology)
+mydata <- mutate(mydata,
+                 voter_ideology = case_when(
+                   voter_ideology == 1~1, voter_ideology == 2~2,
+                   voter_ideology == 3~3, voter_ideology == 4~4,
+                   voter_ideology == 5~5, voter_ideology == 6~6,
+                   voter_ideology == 7~7, voter_ideology == 8~8,
+                   voter_ideology == 9~9, voter_ideology == 10~10))
+
+#SIMPLIFIED IDEOLOGY
+mydata$simple_ideology <- mydata$voter_ideology
+mydata <- mutate(mydata,
+                 simple_ideology = case_when(
+                   voter_ideology == 1~0, voter_ideology == 2~0,
+                   voter_ideology == 3~0, voter_ideology == 4~0,
+                   voter_ideology == 5~1, voter_ideology == 6~1,
+                   voter_ideology == 7~2, voter_ideology == 8~2,
+                   voter_ideology == 9~2, voter_ideology == 10~2))
+
+#RELIGION
+table(mydata$religion)
+mydata <- mutate(mydata,
+                 religion = case_when(
+                   religion == 1~ "Practicing Catholic", 
+                   religion == 2~ "Non-Practicing Catholic",
+                   religion == 3~ "Other Religion",
+                   religion == 4~ "Agnostic/Indifferent/Athiest"))
+
+#RELIGIOUS ATTENDANCE
+table(mydata$rel_attendance)
+mydata <- mutate(mydata,
+                 rel_attendance = case_when(
+                   rel_attendance == 1~1, rel_attendance == 2~2,
+                   rel_attendance == 3~3, rel_attendance == 4~4,
+                   rel_attendance == 5~5, rel_attendance == 6~6))
+
+#PARTY VOTE
+mydata <- mutate(mydata,
+                 partyvote = case_when(
+                   partyvote == 1 ~ "PP", partyvote == 2 ~ "PSOE",
+                   partyvote == 4 ~ "Cs",partyvote == 21 ~ "Podemos",
+                   partyvote == 18 ~ "Vox"))
+
+#SEX
+table(mydata$sex) 
+mydata <- mutate(mydata,
+                 sex = case_when(
+                   sex == 1~0, sex == 2~1)) # MALE = 0, FEMALE = 1
+
+#AGE
+table(mydata$age)
+
+#RELIGION
+mydata$practicing_cath <- mydata$religion
+mydata <- mutate(mydata,
+                 practicing_cath = case_when(
+                   practicing_cath == "Practicing Catholic" ~ 1, 
+                   practicing_cath == "Non-Practicing Catholic" ~ 0,
+                   practicing_cath == "Other Religion"~ 0,
+                   practicing_cath == "Agnostic/Indifferent/Athiest" ~ 0))
+
+### Now, to look at individual issues that correlate with Vox votes:
+
+#IMMIGRATION
+
+#coding: if a respondent says immigration is the most important problem facing the country
+# (whether 1st, 2nd, or 3rd most important), they are coded as a 1, meaning higher concern
+mydata$immigration1 <- mydata$mip1
+mydata <- mutate(mydata,
+                 immigration1 = ifelse(mydata$immigration1 == 18, 1, 0))
+mydata$immigration2 <- mydata$mip2
+mydata <- mutate(mydata,
+                 immigration2 = ifelse(mydata$immigration2 == 18, 1, 0))
+mydata$immigration3 <- mydata$mip3
+mydata <- mutate(mydata,
+                 immigration3 = ifelse(mydata$immigration3 == 18, 1, 0))
+mydata$immigration <- mydata$immigration1 + mydata$immigration2 + mydata$immigration3
+#the following step accounts for respondents who put the issue down twice
+mydata <- mutate(mydata,
+                 immigration = ifelse(mydata$immigration == 0, 0, 1)) 
+mydata = subset(mydata, select = -c(17:19) ) #clean data, don't need immigration1-3
+
+
+#ECONOMY
+#coding: if a respondent says the economy is the most important problem facing the country
+# (whether 1st, 2nd, or 3rd most important), they are coded as a 1, meaning higher concern
+mydata$economy1 <- mydata$mip1
+mydata <- mutate(mydata,
+                 economy1 = ifelse(mydata$economy1 == 8, 1, 0))
+mydata$economy2 <- mydata$mip2
+mydata <- mutate(mydata,
+                 economy2 = ifelse(mydata$economy2 == 8, 1, 0))
+mydata$economy3 <- mydata$mip3
+mydata <- mutate(mydata,
+                 economy3 = ifelse(mydata$economy3 == 8, 1, 0))
+mydata$economy <- mydata$economy1 + mydata$economy2 + mydata$economy3
+#the following step accounts for respondents who put the issue down twice
+mydata <- mutate(mydata,
+                 economy = ifelse(mydata$economy == 0, 0, 1)) 
+mydata = subset(mydata, select = -c(18:20) ) #clean data, don't need economy1-3
+
+
+## CORRUPTION
+mydata$corruption1 <- mydata$mip1
+mydata <- mutate(mydata,
+                 corruption1 = ifelse(mydata$corruption1 == 11, 1, 0))
+mydata$corruption2 <- mydata$mip2
+mydata <- mutate(mydata,
+                 corruption2 = ifelse(mydata$corruption2 == 11, 1, 0))
+mydata$corruption3 <- mydata$mip3
+mydata <- mutate(mydata,
+                 corruption3 = ifelse(mydata$corruption3 == 1, 1, 0))
+mydata$corruption <- mydata$corruption1 + mydata$corruption2 + mydata$corruption3
+#the following step accounts for respondents who put the issue down twice
+mydata <- mutate(mydata,
+                 corruption = ifelse(mydata$corruption == 0, 0, 1)) 
+mydata = subset(mydata, select = -c(19:21) ) #clean data, don't need economy1-3
+
+
+## CRISIS OF VALUES
+mydata$values1 <- mydata$mip1
+mydata <- mutate(mydata,
+                 values1 = ifelse(mydata$values1 == 21, 1, 0))
+mydata$values2 <- mydata$mip2
+mydata <- mutate(mydata,
+                 values2 = ifelse(mydata$values2 == 21, 1, 0))
+mydata$values3 <- mydata$mip3
+mydata <- mutate(mydata,
+                 values3 = ifelse(mydata$values3 == 21, 1, 0))
+mydata$values <- mydata$values1 + mydata$values2 + mydata$values3
+#the following step accounts for respondents who put the issue down twice
+mydata <- mutate(mydata,
+                 values = ifelse(mydata$values == 0, 0, 1)) 
+mydata = subset(mydata, select = -c(20:22) ) #clean data, don't need economy1-3
+
+
+## CATALONIA
+mydata$catalonia1 <- mydata$mip1
+mydata <- mutate(mydata,
+                 catalonia1 = ifelse(mydata$catalonia1 == 45, 1, 0))
+mydata$catalonia2 <- mydata$mip2
+mydata <- mutate(mydata,
+                 catalonia2 = ifelse(mydata$catalonia2 == 45, 1, 0))
+mydata$catalonia3 <- mydata$mip3
+mydata <- mutate(mydata,
+                 catalonia3 = ifelse(mydata$catalonia3 == 45, 1, 0))
+mydata$catalonia <- mydata$catalonia1 + mydata$catalonia2 + mydata$catalonia3
+#the following step accounts for respondents who put the issue down twice
+mydata <- mutate(mydata,
+                 catalonia = ifelse(mydata$catalonia == 0, 0, 1)) 
+mydata = subset(mydata, select = -c(21:23) ) #clean data, don't need economy1-3
+```
+```{r creating models, include=FALSE}
+attendance_no_control <- lm(mydata$voter_ideology ~ mydata$rel_attendance)
+practicing_no_control <- lm(mydata$voter_ideology ~ mydata$practicing_cath)
+attendance_control <- lm(mydata$voter_ideology ~ mydata$rel_attendance + mydata$age + mydata$sex)
+practicing_control <- lm(mydata$voter_ideology ~ mydata$practicing_cath + mydata$age + mydata$sex)
+```
+```{r relevant packages, include=FALSE}
+library("Rmisc")
+library("magrittr")
+library("broom")
+library("estimatr")
+library("modelsummary")
+library("stargazer")
+library("naniar")
+```
+```{r regression table religion and alaignment, results='asis', echo=FALSE, table.placement = "!H"}
+stargazer(attendance_no_control, practicing_no_control,
+          attendance_control, practicing_control,  type = "latex", 
+          title = "Effect of Religion on Voter Ideology",
+          covariate.labels = c("Religious Attendance Level", "Practicing Catholic",
+                               "Age", "Sex"),
+          dep.var.labels = c("Attendance", "Practincing?", "Attendance", "Practicing?"),
+          font.size = "tiny", header = FALSE, omit.stat=c("f", "ser"))
+```
+
+
+The results presented indicate a relatively religiously aligned electorate. In each model, higher levels of religiosity are significantly correlated with more right-ideologies. Put simply, religious voters are more likely to hold right-ideologies. For example, the difference in non-practicing Catholic and practicing Catholic respondents is related to an over one point difference (positive) in political ideology. 
+
+Given the power of religiosity in predicting political ideologies, I now turn to the relationship between religiosity party support. Our results above potentially suggest that parties further on the right should win religious voters in Spain, as party and voter ideologies should match. Therefore, I would expect Vox's voting constituency to be composed of more religious voters as compared to that of other parties. Party support is a self-reported measure of respondents' votes cast in the previous November 2019 general election. Given the fact that vote share is unequally distributed across parties, I am not concerned with who is winning the largest percentage of religious voters, because that would bias larger parties. Instead, observing the average religiosity profile of parties' voters gives a better insight into the individuals that a party attracts. The distribution of party support in this dataset can be found in the appendix (A3). \par
+
+In Figures 1 and 2, I plot 95 percent confidence intervals for the average religiosity of parties' voting constituency. I use the same two measures of religiosity as deployed in the above regression. Contrary to the prediction that Vox's constituency is more religious than other parties, I find that Vox's voting core is not particularly religious.\newline \par
+
+```{r party tests, include = FALSE}
+library(Hmisc)
+
+#Creating Graphic for mean religious attendance
+means_test <- subset(mydata, mydata$partyvote!="NA")
+means_test <- subset(means_test, means_test$rel_attendance!= "NA")
+means_test$partyvote <- as.factor(means_test$partyvote)
+means_test$partyvote <- factor(means_test$partyvote,
+                               levels = c("Podemos", "PSOE", "Cs", "PP", "Vox"))
+
+#Creating Graphic for mean practicing catholic
+means_test2 <- subset(mydata, mydata$partyvote!="NA")
+means_test2 <- subset(means_test2, means_test2$practicing_cath!="NA")
+means_test2$partyvote <- as.factor(means_test2$partyvote)
+means_test2$partyvote <- factor(means_test2$partyvote,
+                               levels = c("Podemos", "PSOE", "Cs", "PP", "Vox"))
+
+#Setting color parameters for figures
+colorfill <- c( "purple2", "red2", "darkorange2", "dodgerblue1", "springgreen3" )
+names(colorfill) <- levels(means_test$partyvote)
+colScale <- scale_colour_manual(name = "partyvote",values = colorfill)
+```
+
+```{r party id, figures-side, fig.show="hold", fig.align = "center", out.width="49%", echo=FALSE}
+g0 <- ggplot(means_test,aes(x=rel_attendance ,y=partyvote))
+g_mean<-g0+stat_summary(fun=mean,geom="point")
+g_mean +
+  stat_summary(fun.data=mean_cl_normal,geom="errorbar", aes(col=factor(partyvote)),
+               show.legend = F) + 
+  colScale +
+  geom_vline(xintercept = mean(mydata$rel_attendance, na.rm = T), col="dark gray") +
+  labs(title = "Figure 1: Mean Religious Attendance by Party", 
+       y = "Party",
+       x= "Religious Attendance (1-6 Scale)", 
+       subtitle = "95% confidence intervals, line indicates overall mean attendance ",
+       caption = "Data from CIS Barometer, December 2019")
+
+
+g2 <- ggplot(means_test2,aes(x=practicing_cath ,y=partyvote))
+g_mean2<-g2+stat_summary(fun=mean,geom="point")
+g_mean2 +
+  stat_summary(fun.data=mean_cl_normal,geom="errorbar", aes(col=factor(partyvote)),
+               show.legend = F) + 
+  colScale +
+  geom_vline(xintercept = mean(mydata$practicing_cath, na.rm = T), col="dark gray") +
+  labs(title = "Figure 2: Proportion Practicing Catholics by Party", 
+       y = "Party",
+       x= "Proportion of Voters who are Practicing Catholics", 
+       subtitle = "95% confidence intervals, line is overall proportion practicing ",
+       caption = "Data from CIS Barometer, December 2019")
+```
+
+In both figures, the Popular Party clearly attracts a more religious section of the electorate. The PP's average voter is significantly more religious in both measures of religiosity as compared to the overall average voter. Vox, on the other hand, attracts an electorate that is more generally in line with the overall system average. We can thus reasonably conclude that Vox is not winning religious voters in any significant fashion. Instead, the party's electorate appears far more in line (in terms of religiosity) with the population average. \par
+
+Results from these figures present a new puzzle. Originally, this paper asked whether the presence of a more overt religious party might strengthen religious alignment. In the case of Spain, it appears that Vox does not strengthen religions alignment, as the party's voting constituency is no more religious than the average data for the overall system. The Popular Party, however, attracts a religious voting constituency with a less unabashedly-religious message than Vox. This finding would support theories that assert that center-right parties already lay claim to religious voters, and that dealignment between religious voters and Conservative or Christian Democratic parties may be over-exaggerated [@immerzeelReligionCatalystRestraint2013; @vanderbrugReligionPartyChoice2009]. The rest of this paper examines the puzzle arising from this observation. Put simply, what work does religion do for radical right parties that are not winning religious votes?
+
+
+## 4. Alternative Uses for Religion
+
+If the Popular Party, and not Vox, is winning religious voters, then what strategic advantage does religion offer Vox? The description of cleavage voting is an idealized version of party competition. In actuality, most voters do not select parties based off of single-issues that cleanly exist in exclusivity. Instead, one issue is often related to a spell of other issues, messages, and styles. Therefore, although Vox may not be winning religious votes, the overt rhetorical usage of religion may still play a strategic role in the party's electoral strategy. \par
+
+In this section, I attempt to trace Vox's strategic deployment of religion as an indirect mechanism that supports and builds the party's brand. First, I examine the issues that Vox actually does "own." I find that Vox's success is largely connected to concern over immigration. Religious messaging, then, plays a functional role for Vox as a "reputational shield" as well as a signal of credibility [@ivarsflatenReputationalShieldsWhy2006]. Religion is instrumental in the creation of a "national culture" that Vox uses to promote and justify their anti-immigration policy. I then discuss how religion functions not just as a tool to strengthen Vox's issue ownership, but also as a tool to strengthen the parties exclusive claims to resistance and anti-political correctness frames. 
+
+### 4.1 Vox's Issues
+
+Before understanding the connection between religion and non-explicitly religious issues, it is essential to identify the issues that are actually driving voters towards Vox. Issue ownership refers to a party's perceived expertise and ability to handle various policy issues [@budgePartyCompetitionSelective1983; @petrocikIssueOwnershipPresidential1996]. Such perceptions of credibility are often built through demonstrated competence [@belangerIssueSalienceIssue2008]. However, for a party that is just entering into a party marketplace, ownership cannot be claimed through a record in government. Instead, parties seeking to "own" certain issues rely on rhetorical and programmatic innovation to distance themselves from other parties. Additionally, challenger parties may stake an ownership claim by promoting "wedge issues" that more established parties either avoid or do no present a coherent and consistent position on [@devriesPoliticalEntrepreneursRise2020]. \par
+
+Vox's position on immigration offers the most clear example of issue ownership via "wedge issue" promotion. Both the Popular Party and Ciudadanos--Vox's competitors on the right--offer a more mixed stance towards immigration, generally supporting immigration, a humanitarian approach to migration, and a careful avoidance of allegations of racism. Vox, on the other hand, offers a clear anti-immigrant message.  \par
+
+Additionally, Vox's breakthrough has been credited to its punitive response to the Catalan Independence Movement [@turnbull-dugarteExplainingEndSpanish2019]. While not the only party against independence, Vox offers the harshest policy stance, advocating for the banning of separatist regional parties and the imprisonment of movement leaders [@vox100MedidasPara2019]. \par
+
+To empirically test Vox's claim over certain issues, I employ a logistic regression strategy to identify which issues are correlated with support for the party. I am concerned with the outcome variable of Vox support. I run three models to capture support for the party. First, I create a dummy variable that codes supporters for Vox as a 1 and supporters of any other major party as a 0. Second, I create a similar dummy variable, but here with a subset of only voters of parties on the right (Ciudadanos, the Popular Party, and Vox). Finally, I do the same with a subset of only Vox and PP voters. The latter two models might offer a better insight into issue ownership, given that Vox competes to own these issues *on the right*. \par
+
+Independent variables in this analysis relate to issue prioritization. I leverage the "most important problem" open-ended question asked in the survey to better understand voters' issue priorities. Respondents are asked to rate the three most important issues that Spain faces. For a variety of issues, I code respondents as a 1 if they mention the issue as a top problem facing the country and a 0 if they do not. I include immigration, Catalan independence, "crisis of values," economy, and corruption as issues in this dataset. I include the latter two variables in this analysis given their prominence in materialist explanations of radical right success [@muddeFarRightToday2019]. I include the issue of a "crisis of values" given its potential connection to religion. Descriptive statistics of these variables can be found in the appendix (A4). \par
+
+Again, I rely on individual-level survey data from the December 2019 CIS barometer. I incorporate age, sex, and ideology as control variables in the analysis given their potential confounding affects on both issue priority and party choice. If Vox is to own certain issues, I should expect to find that voters who prioritize such issues support Vox at greater rates than other parties. In Table 2, I present the odds ratios for party support given different issue prioritization. \par
+
+```{r prepping issues, include=FALSE}
+issues <- subset(mydata, mydata$partyvote!="NA")
+```
+
+```{r setting up models, include=FALSE}
+# Set up 3 models (all binary DV, different subsets)
+issues$allparties_vote <- issues$partyvote
+issues <- mutate(issues,
+                 allparties_vote= ifelse(issues$allparties_vote == "Vox", 1, 0))
+issues$rightparties_vote <- issues$partyvote
+issues <- mutate(issues,
+                 rightparties_vote = case_when(
+                   rightparties_vote == "Vox" ~ 1,
+                   rightparties_vote == "PP" ~ 0,
+                   rightparties_vote == "Cs" ~ 0))
+issues$vox_pp_vote <- issues$partyvote
+issues <- mutate(issues,
+                 vox_pp_vote = case_when(
+                   vox_pp_vote == "Vox" ~ 1,
+                   vox_pp_vote == "PP" ~ 0))
+
+#Doing logit regressions (binary DV) for 3 models
+allparties <- glm(issues$allparties_vote ~ issues$immigration + issues$economy +
+                   issues$corruption + issues$values + issues$catalonia +
+                   issues$sex + issues$age + issues$voter_ideology, family = "binomial")
+rightparties <- glm(issues$rightparties_vote ~ issues$immigration + issues$economy +
+                      issues$corruption + issues$values + issues$catalonia +
+                      issues$sex + issues$age + issues$voter_ideology, 
+                    family = "binomial")
+justpp <- glm(issues$vox_pp_vote ~ issues$immigration + issues$economy +
+                issues$corruption + issues$values + issues$catalonia +
+                issues$sex + issues$age + issues$voter_ideology, family = "binomial")
+
+# Copying code from https://cimentadaj.github.io/blog/2016-08-22
+#-producing-stargazer-tables-with-odds-ratios-and-standard-errors-in-r/
+#producing-stargazer-tables-with-odds-ratios-and-standard-errors-in-r/
+
+stargazer2 <- function(model, odd.ratio = F, ...) {
+  if(!("list" %in% class(model))) model <- list(model)
+  
+  if (odd.ratio) {
+    coefOR2 <- lapply(model, function(x) exp(coef(x)))
+    seOR2 <- lapply(model, function(x) exp(coef(x)) * summary(x)$coef[, 2])
+    p2 <- lapply(model, function(x) summary(x)$coefficients[, 4])
+    stargazer(model, coef = coefOR2, se = seOR2, p = p2, ...)
+    
+  } else {
+    stargazer(model, ...)
+  }
+}
+
+
+#Making table with odds ratios for logit regression (USE THIS)
+models <- list(allparties, rightparties, justpp)
+```
+
+```{r issues, results='asis', fig.height=4, fig.width = 4, echo=FALSE}
+stargazer2(models, odd.ratio = T, type = "latex",
+           title= "Odds Ratios: Issue perception and Vox Support",
+           covariate.labels = c("Immigration", "Economy", "Corruption", 
+                                "Crisis of Values", "Catalan Independence",
+                                "Sex", "Age", "Ideology"),
+           dep.var.labels   = c("All Parties", "Right Party Voters", "PP, Vox Voters"), 
+           font.size = "tiny", header = FALSE, omit.stat=c("f", "ser", "aic", "ll"))
+```
+
+The results presented in Table 2 indicate that although the prioritization of multiple issues may be correlated with greater levels of support for Vox (odds ratios > 1), concern over immigration has by far the largest affect in predicting Vox vote choice. Vox's clarity and constant centering of immigration indicate strong ownership over the issue. 
+
+
+### 4.2 Immigration and Religion
+
+Immigration is a central tenet to Vox's platform, vote share, and ascent to the national congress. Vox's program and rhetoric is highly saturated with anti-immigration messages and the party has come to own the issue on the right. The above analysis demonstrates this clear ownership, as concern over immigration emerges as the issue most strongly associated with Vox's voting constituency. It is with reference to immigration that Vox's overt religious messaging can be better understood. \par
+
+Instead of thinking of Vox's deployment of religion as messaging intended to win religious voters, one can understand such messaging as a tactic to strengthen its anti-immigration position. It is important to here note that immigration and Catholicism are not opposed--in fact, humanitarian treatment of all peoples could be considered central to Catholic teachings--although some evidence draws a negative association between religiosity and pro-immigrant attitudes [@immerzeelReligionCatalystRestraint2013]. Still, however, religious messaging works to strengthen Vox's anti-immigration position in two ways: first by deepening perceived divisions between "Catholic" Spaniards and Muslim immigrants, and second by providing the party with a shield against accusations of racism. \par
+
+Marketing itself as defenders of Catholicism, Vox is also positioning itself as defenders and promoters of a "national culture" or identity [@froioRaceReligionCulture2018; @rydgrenRadicalRightwingParties2017]. This national culture invokes a Catholic heritage. Accordingly, reference to Catholicism does not signify in- and out-groups based on modern levels of religiosity. Membership and inheritance of this culture does not depend on one's current level of church attendance or whether one considers themselves a practicing Catholic. Instead, belonging to and within the national culture is a reference to lineage. Therefore, immigrants--and particularly Muslim immigrants, the main targets of Vox's concern--are left out of the national culture. \par
+
+This manufacturing of a national culture helps to understand why Vox might employ overt religious messaging. By promoting a national culture derived from a Catholic heritage, they seek to articulate and deepen perceived differences between "Catholic" Spaniards and Muslim immigrants. This tactic both solidifies the party as owners of the anti-immigration issue position while also attempting to raise the salience of the issue. In this way, the party can expect to win more votes--when voters perceive the issue/division as real and important, and understand Vox as the party that offers a coherent response, they may be compelled to cast their ballots for the party. \par
+
+Vox is thus leveraging religion to build "national cultural" arguments that seek to justify anti-Islam positions. Not only does this strategy draw attention to the issue of immigration, it also serves as a defense against accusations of racism [@froioRaceReligionCulture2018]. Vox can then promote anti-immigrant policies in the name of preservation of a "national culture," rather than as an opposition to other cultures/religions. \par
+
+@ivarsflatenReputationalShieldsWhy2006 demonstrates that radical right parties without "reputational shields"--here defined as legacies that can credibly fend off labels of racism--generally fail to win support. Parties without reputational shields even tend to lose voters directly aligned with their issue positions [@harteveldWhyWomenAvoid2018]. Pushing an anti-immigrant, anti-Islam message is likely to be met with accusations of racism. However, boasting a strong religious connection may serve as a tool for Vox to claim morality, tradition, and policy positions "detached" from race. Though a shallow argument, the party makes very little effort elsewhere to defend themselves from accusations of racism. Citing its one black national parliamentarian (out of 52) as proof of the party's anti-racism, adherence to and celebration of Catholicism appears as the party's next line of defense. \par
+
+One useful comparison for understanding the strategic use of religion for Vox relates to the deployment of religion described by @engelsPeasantWarGermany2015 in his writings on *The Peasant War in Germany*. Engels describes how certain revolutionaries struggled to to gain traction because of linguistic and cultural barriers to discussing class cleavages and a class-conscious revolution. Religion is a familiar topic to both parties and voters, or in Engels' case, revolutionaries and peasants. Given the barriers on anti-Islamic rhetoric and overtly racist policy, religion, as a both a pathway to define a national culture that promotes its anti-immigration position and as a reputational shield, offers a common, familiar, and relatively safe way for Vox to market itself and its central issue.
+
+
+### 4.3 Frame Ownership and Religion
+
+Not only does religion serve to promote and protect Vox's immigration policy, it also works as a tool used to craft Vox's political brand. Specifically, the party's use of religion contributes to its ownership of both anti-political correctness and resistance frames. In cultivating and owning frames--here referring to non-policy related associations that parties attach to themselves or others--Vox can attract voters not only with the issues that it defends, but also the more unconscious associations that a voter draws between certain social phenomena and partisan choices. \par
+
+The deployment of overt religious messaging primarily serves to bolster Vox's credibility as the party of resistance. Vox has a history in its discourse and media publications of building a frame best represented in the lines of "we are the resistance." The phrase has been delivered by multiple party leaders across time and space. A logical inquiry into this question, therefore, might be: resistance to what? \par
+
+In order to necessitate resistance, the party needs an enemy. In manufacturing this enemy, Vox often alludes to communism, multi-culturalism, the lgbtq and feminist movements in Spain, and leaders of the Catalan Independence Movement. Evidence of this resistance narrative and the party's enemies that it intends to resist can be seen in a social media post that spread across all of Vox's platforms immediately following their emergence in the national parliament (see Appendix, A5). While these enemies are distinct forces, a common threat throughout is their aversion to Catholicism (or religion) as a fundamental part of Spain's national culture. To Vox, Catholicism can be used to bolster its credibility as the party that will defend tradition and conservative social policy aligning with Catholic social values. Religion offers a common thread to tie Vox's various enemies into a single, coherent narrative. \par
+
+Somewhat ironically, where others have justified the building and advancement of movements that Vox deems "enemies" as a resistance to religion, Vox subsequently turns such a narrative around. For example, the logic that drives some communist "revolutionaries" parallels the logic driving Vox's backlash. Take, for instance, @leninSocialismReligion1905's understanding of religion as a divisive force that must (and eventually will) be overcome in order to achieve a socialist revolution. Here, religion is something to be abolished in order to achieve a state of societal unity and advancement. Similarly, @goldmanFailureChristianity1913 cites Christianity as the ultimate form of non-resistance and the "breaker of man's will to dare and to do" (233). Thus, Atheism, and the negation of Christianity, serve as emancipatory tools. \par
+
+The message of Vox, however, is that socialism, multi-culturalism, and progressivism are forces that must be overcome. Anti-religion, instead of a site of resistance, actually presents a common thread in what must be resisted. Vox's overt deployment of religious messaging thus presents a logical coherence in its resistance framework. Instead of a scattered battle to resist various forces that "threaten" the country, Vox can present a simplified picture of resistance against forces that oppose a particular "national culture" grounded in Catholicism. In weaving this coherent narrative of a generalized enemy--bonded through an opposition to what Vox's deems the "true national culture"--Vox establishes itself as the party of resistance. In this sense, it establishes ownership over a certain frame, and subsequently, becomes an attractive party to those wanting a resisting force that will protect the status quo.\par
+
+Vox's resistance frame is closely related to a second frame to which the party claims ownership. Religion can be a site of opportunity to build the party's anti-political correctness credentials. Deployment of anti-political correctness frames is common among radical right parties. The frame is central to the argument that that existing elite, deemed beholden to the norms of political correctness, must be thrown out of office [@rydgrenRadicalRightwingParties2017]. In a multi-cultural Spain (and Europe), exaggerated insistence on Spain as fundamentally Catholic in its national culture is a demonstration of the party's willingness to break these politically correct norms. Subsequently, the party is painting other parties (and party leaders) as weak and beholden--essentially defining these leaders as unwilling to defend the "true" identity of the country. \par
+
+A clear example of religion as a site of this frame construction can be understood in reference to the setting in which I opened this paper. Upon the burning of the Notre Dame Cathedral, Vox invoked a Christian European history as a means to label the media (a stand in for the European "mainstream") as unwilling to tell the true story of European culture--one based in religion. Accordingly, Vox, like many other Radical Right parties across the continent, strengthen their association with the anti-political correctness frame. \par
+
+Taken together, religion offers a common thread between Vox's relevant issues and frames. It defines a national culture--one that justifies the anti-immigration position, substantiates a narrative of resistance, and offers the party an opportunity to prove themselves as authentic and not beholden to norms of political correctness. Put simply, religion is doing substantial work for the party--it is fundamental to Vox's marketing and success. Without necessarily winning religious votes, religion is crucial to the story that Vox tells and the story that attracts voters to the party.
+
+
+## 5. Conclusion
+
+This paper initially sought to address the phenomenon of religious dealignment and the ability of more overt religious parties to capture religious voters. Narrowing the scope of this investigation to Spain offered an opportunity to leverage the appearance of a new radical right party that boasts a strong connection to and pride towards the country's Catholic history. Religiosity in Spain, as shown in Table 1, has a relatively strong predictive capacity in determining political alignments. However, even though the more religious tend to have further right political ideologies, they do not appear to be moving to the right-most party in the party marketplace. Instead, Vox's voting constituency appears to be no more religious than the overall average of the country, and it is the conservative Popular Party that draws most heavily from religious voters. \par
+
+This led to a larger puzzle: if Vox is not winning religious voters, why does it market itself as defenders and promoters of Catholicism. Put simply, if religion is not winning voters, what work does it do for the party? To offer one answer to this puzzle, I investigated the issues that predict support for Vox. Concern over immigration stood out as especially strong in leading voters to the party. Accordingly, I argued that religion serves as a tool to strengthen Vox's credentials as the anti-immigrant party in Spain while also offering a reputational shield to justify the party's potentially controversial position. Catholicism is fundamental to Vox's articulation of a "national culture," without which the party would struggle to justify and promote their position. \par
+
+Defining this "national culture" not only strengthens the party as justified owners of anti-immigration policy, but also is essential to the story that Vox is telling its voters. Religion helps to build coherent resistance and anti-political correctness frames. These frames construct the markety strategy that the party employs to attract voters. \par
+
+Moving forward, the actual linkage between religion, immigration, and various frames remains empirically untested. The claim that religion is central to Vox's successful ownership of anti-immigration policy, resistance, and anti-political correctness frames is here supported through a more theoretical connecting of religion and such phenomena. One potential way to test if these really do rely on religion for their successful implementation could be to experimentally test whether religious primes change reported attitudes. \par
+
+Additionally, this project could offer a case study into a larger phenomenon in two ways. First, it could be of interest to examine how religion functions for radical right parties outside of Spain. For example, it is possible that other radical right parties are not winning religious voters, but their strategic deployment of religious messaging could be doing work outside of that discussed in the paper (in relation to immigration, national culture, and frame ownership). Second, it is possible that religion is not the only issue that Vox (or other radical right parties) promote yet fail to "win" voters with. This statement opens up a far larger research agenda into perceived party messaging inefficiencies. In other words, why do parties sometimes promote issues that initially seem not to win them votes? For the purposes of this paper, I have asserted that this question should not be understood as a strategic mistake. Quite the contrary--the use of of religion, while not bringing Vox religious voters per se, still is doing fundamental work to position the party to credibly, safely, and coherently own the strategies that do bring votes.
+
+
+\newpage
+## References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\indent
+<div id="refs"></div>
+\endgroup
+
+\newpage
+
+## Appendix
+
+### A1. Vox President Santiago Abascal's Twitter Reaction to Notre Dame Burning
+
+\begin{center}
+\includegraphics[width = 50mm]{notredame}
+\end{center}
+
+\par
+
+### A2. Descriptive Statistics, Religious Alignment
+
+```{r descriptive stats, echo=FALSE}
+datasummary((`Religious Attendance` = na.omit(rel_attendance)) + 
+              (`Practicing Catholic` = na.omit(practicing_cath)) +
+              (`Voter Ideology` = na.omit(voter_ideology)) +
+              (`Simplified Ideology` = na.omit(simple_ideology)) +
+              (`Sex` = na.omit(sex)) + (`Age` = na.omit(age)) 
+            ~ (`N` = length) + mean + SD + Min + Max,
+            data = mydata,
+            output = 'latex', #change to latex for paper
+            title = NULL)
+```
+
+
+\newpage
+### A3. Respondant Party Vote Distribution
+
+```{r party statistics, echo=FALSE}
+datasummary_skim(mydata$partyvote, type='categorical', 
+                 title = NULL, output = 'markdown')
+```
+
+
+\par
+### A4. Descriptive Statistics, Most Important Issues
+
+```{r issue stats, echo=FALSE}
+datasummary((`Immigration` = immigration) + 
+              (`Economy` = economy) +
+              (`Corruption` = corruption) +
+              (`Crisis of Values` = values) +
+              (`Catalan Independence` = catalonia) +
+              (`Sex` = na.omit(sex)) + (`Age` = na.omit(age)) +
+              (`Ideology` = na.omit(voter_ideology)) 
+            ~ (`N` = length) + mean + SD + Min + Max,
+            data = issues,
+            output = 'markdown', #change to latex for paper
+            title = NULL)
+```
+
+\par
+### A5. Vox Post-Electoral Social Media Post, April 24 2019 (Accessed via Twitter)
+
+\begin{center}
+\includegraphics[width = 50mm]{resistance}
+\end{center}
+
